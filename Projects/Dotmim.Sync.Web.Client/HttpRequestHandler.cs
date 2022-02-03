@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Microsoft.Net.Http.Headers;
+//using Microsoft.Net.Http.Headers;
 using System.Net.Http.Headers;
 
 namespace Dotmim.Sync.Web.Client
@@ -22,7 +22,7 @@ namespace Dotmim.Sync.Web.Client
 
         internal Dictionary<string, string> ScopeParameters { get; } = new Dictionary<string, string>();
 
-        internal CookieHeaderValue Cookie { get; set; }
+        //internal CookieHeaderValue Cookie { get; set; }
 
         private BaseOrchestrator orchestrator;
 
@@ -133,11 +133,11 @@ namespace Dotmim.Sync.Web.Client
             {
 #if NETSTANDARD
                 // Get the first cookie
-                this.Cookie = CookieHeaderValue.ParseList(cookieList).FirstOrDefault();
+                //this.Cookie = CookieHeaderValue.ParseList(cookieList).FirstOrDefault();
 #else
                 //try to parse the very first cookie
-                if (CookieHeaderValue.TryParse(cookieList[0], out var cookie))
-                    this.Cookie = cookie;
+                //if (CookieHeaderValue.TryParse(cookieList[0], out var cookie))
+                //    this.Cookie = cookie;
 #endif
             }
         }

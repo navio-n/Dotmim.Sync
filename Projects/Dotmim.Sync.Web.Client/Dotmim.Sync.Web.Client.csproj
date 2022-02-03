@@ -44,8 +44,8 @@
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 	<ItemGroup Condition=" '$(TargetFramework)' == '$(TargetFrameworkNetStandard)' ">
-		<PackageReference Include="Microsoft.Net.Http.Headers" Version="2.2.8" />
-		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="2.2.0" />
+		<!--<PackageReference Include="Microsoft.Net.Http.Headers" Version="2.2.8" />-->
+		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.13" />
 	</ItemGroup>
 
 	<ItemGroup>
